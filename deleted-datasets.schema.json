@@ -44,6 +44,7 @@
 					"items": {
 						"id": "#reason/categories/0",
 						"type": "string",
+						"pattern": "[a-z_]+"
 					}
 				},
 				"conclusion": {
@@ -75,12 +76,15 @@
 					"sha256": {
 						"id": "#sha256",
 						"type": "string",
+						"pattern": "[0-9a-f]{64}",
 						"title": "Empreinte SHA-256",
 						"description": "Empreinte du fichier donnée par l'algorithme de hachage SHA-256."
 					},
 					"kilobytes": {
 						"id": "#kilobytes",
-						"type": "string",
+						"type": "integer",
+						"minimum": 0,
+						"exclusiveMinimum": true,
 						"title": "Poids du fichier (kiB)",
 						"description": "Poids du fichier déposé en kiB."
 					}

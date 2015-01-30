@@ -1,0 +1,117 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://data.gouv.fr/schemas/deleted#",
+	"name": "/",
+	"title": "Root schema.",
+	"description": "An explanation about the puropose of this instance described by this schema.",
+	"type": "object",
+	"properties": {
+		"name": {
+			"id": "#name",
+			"type": "string",
+			"title": "Nom du dataset supprimé",
+			"description": "Tel que fourni par l'auteur lors du dépôt.",
+			"name": "name"
+		},
+		"author": {
+			"id": "#author",
+			"type": "string",
+			"title": "Nom du déposant",
+			"description": "Nom d’utilisateur sur la plateforme data.gouv.fr.",
+			"name": "author"
+		},
+		"deliveredAt": {
+			"id": "#deliveredAt",
+			"type": "string",
+			"format": "date-time",
+			"title": "Date de dépôt",
+			"description": "Date de dépôt sur la plateforme data.gouv.fr.",
+			"name": "deliveredAt"
+		},
+		"deletedAt": {
+			"id": "#deletedAt",
+			"type": "string",
+			"format": "date-time",
+			"title": "Date de suppression",
+			"description": "Date d'effacement de ce dataset sur la plateforme data.gouv.fr.",
+			"name": "deletedAt"
+		},
+		"reason": {
+			"id": "#reason",
+			"type": "object",
+			"title": "Raison de la suppression",
+			"name": "reason",
+			"properties": {
+				"categories": {
+					"id": "#reason/categories",
+					"type": "array",
+					"title": "Catégories des raisons de suppression",
+					"description": "[EXPÉRIMENTAL] Les catégories seront décrites au fur et à mesure que les raisons s’accumuleront.",
+					"name": "categories",
+					"items": {
+						"id": "#reason/categories/0",
+						"type": "string",
+						"title": "0 schema.",
+						"description": "An explanation about the puropose of this instance described by this schema.",
+						"name": "0"
+					}
+				},
+				"conclusion": {
+					"id": "#reason/conclusion",
+					"type": "string",
+					"title": "Justification de la suppression",
+					"description": "Conclusion du débat ayant mené à la suppression. Il s'agit d'une forme de jurisprudence.",
+					"name": "conclusion"
+				}
+			},
+			"additionalProperties": false
+		},
+		"files": {
+			"id": "#files",
+			"type": "array",
+			"title": "Fichiers déposés",
+			"description": "L'objectif de cet objet est de permettre l'identification formelle de l'identité des fichiers déposés, par exemple en cas de contestation de la suppression.",
+			"name": "files",
+			"items": {
+				"id": "file",
+				"type": "object",
+				"title": "Description d'un fichier",
+				"description": "Chaque fichier du dataset est caractérisé par un objet de ce type.",
+				"name": "0",
+				"properties": {
+					"name": {
+						"id": "#name",
+						"type": "string",
+						"title": "Nom du fichier",
+						"description": "Nom du fichier tel que fourni par le déposant.",
+						"name": "name"
+					},
+					"sha256": {
+						"id": "#sha256",
+						"type": "string",
+						"title": "Empreinte SHA-256",
+						"description": "Empreinte du fichier donnée par l'algorithme de hachage SHA-256.",
+						"name": "sha256"
+					},
+					"kilobytes": {
+						"id": "#kilobytes",
+						"type": "string",
+						"title": "Poids du fichier (kiB)",
+						"description": "Poids du fichier déposé en kiB.",
+						"name": "kilobytes"
+					}
+				},
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"author",
+		"deliveredAt",
+		"deletedAt",
+		"reason",
+		"files"
+	]
+}

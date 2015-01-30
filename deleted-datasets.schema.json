@@ -1,8 +1,8 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "https://data.gouv.fr/schemas/deleted#",
-	"title": "Root schema.",
-	"description": "An explanation about the puropose of this instance described by this schema.",
+	"title": "Dataset supprimé",
+	"description": "Description d'un jeu de données supprimé de la plateforme data.gouv.fr.",
 	"type": "object",
 	"properties": {
 		"name": {
@@ -44,8 +44,6 @@
 					"items": {
 						"id": "#reason/categories/0",
 						"type": "string",
-						"title": "0 schema.",
-						"description": "An explanation about the puropose of this instance described by this schema."
 					}
 				},
 				"conclusion": {

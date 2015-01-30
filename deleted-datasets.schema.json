@@ -1,14 +1,14 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id": "https://data.gouv.fr/schemas/deleted#",
-	"title": "Dataset supprimé",
+	"title": "Jeu de données supprimé",
 	"description": "Description d'un jeu de données supprimé de la plateforme data.gouv.fr.",
 	"type": "object",
 	"properties": {
 		"name": {
 			"id": "#name",
 			"type": "string",
-			"title": "Nom du dataset supprimé",
+			"title": "Nom du jeu de données supprimé",
 			"description": "Tel que fourni par l'auteur lors du dépôt."
 		},
 		"author": {
@@ -29,7 +29,7 @@
 			"type": "string",
 			"format": "date-time",
 			"title": "Date de suppression",
-			"description": "Date d'effacement de ce dataset sur la plateforme data.gouv.fr."
+			"description": "Date d'effacement du jeu de données sur la plateforme data.gouv.fr."
 		},
 		"reason": {
 			"id": "#reason",
@@ -65,7 +65,7 @@
 				"id": "file",
 				"type": "object",
 				"title": "Description d'un fichier",
-				"description": "Chaque fichier du dataset est caractérisé par un objet de ce type.",
+				"description": "Chaque fichier du jeu de données est caractérisé par un objet de ce type.",
 				"properties": {
 					"name": {
 						"id": "#name",

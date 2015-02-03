@@ -1,8 +1,8 @@
 {
 	"scripts": {
-		"test": "jayschema deleted-datasets.schema.json"
+		"test": "z-schema deleted-datasets.schema.json"
 	},
 	"devDependencies": {
-		"jayschema": "*"
+		"z-schema": "^3.4.2"
 	}
 }

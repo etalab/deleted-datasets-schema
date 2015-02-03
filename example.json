@@ -2,16 +2,16 @@
 	"name": "YouPorn",
 	"author": "Hubert Goffin",
 	"deliveredAt": "",
-	"deletedAt": "2014-11-28T00:00:00",
+	"deletedAt": "2014-11-28T00:00:00Z",
 	"reason": {
-		"category": "interet_public",
+		"categories": [ "interet_public" ],
 		"conclusion": "La question qui se pose donc à nous est de savoir si les données publiées sont « d’intérêt public ». Les travaux de ce groupe de recherche Sexualitics sont un sujet de recherche pertinent et une approche par les données (pour le moins) originale.  Cela ne suffit par contre pas, selon nous, à qualifier l'« intérêt public » de ce type de données."
 	},
 	"files": [
 		{
 			"name": "",
 			"sha256": "",
-			"kilobytes": ""
+			"kilobytes": 0
 		}
 	]
 }

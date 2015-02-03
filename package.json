@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"test": "z-schema deleted-datasets.schema.json"
+		"test": "z-schema deleted-datasets.schema.json && z-schema deleted-datasets.schema.json example.json"
 	},
 	"devDependencies": {
 		"z-schema": "^3.4.2"
